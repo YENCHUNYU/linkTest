@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Link Test</title>
+</head>
+<body>
+    <h1>Deep Link Test</h1>
+    <p>Click the button below to return to the app with a token.</p>
+    <button onclick="redirectToApp()">Return to App</button>
+
+    <script>
+        function redirectToApp() {
+            window.location.href = "myapp://auth?token=ehiorsv";
+        }
+    </script>
+</body>
+</html>
