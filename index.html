@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,64 @@
     <script>
         function redirectToApp() {
             window.location.href = "pass2uAccess://auth?token=ehiorsv";
+        }
+    </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>WebView Test</title>
+    <style>
+        /* Style for the button */
+        button {
+            font-size: 18px; /* Increase the font size */
+            padding: 10px 20px; /* Add padding for a larger clickable area */
+            background-color: #007BFF; /* Set a nice background color (blue) */
+            color: white; /* Set text color to white */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+        /* Change button color on hover */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Center the content on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello WebView</h1>
+        <button onclick="sendData()">Send Data to App</button>
+    </div>
+
+    <script>
+        function sendData() {
+            const message = "This is a message from the web page.";
+            window.webkit.messageHandlers.appHandler.postMessage(message);
         }
     </script>
 </body>
