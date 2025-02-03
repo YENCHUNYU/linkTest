@@ -70,7 +70,7 @@
     <script>
         function sendData() {
             const message = "This is a message from the web page.";
-            window.webkit.messageHandlers.iOS.postMessage(message);
+            window.webkit.messageHandlers.appHandler.postMessage(message);
         }
     </script>
 </body>
